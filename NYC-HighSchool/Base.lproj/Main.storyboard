@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ttA-O8-Uzk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NYC_HighSchool" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="blJ-JC-rtf">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="KXg-VN-122"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3Aj-Ta-t4f"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" id="wDh-ve-bZR">
+                                <rect key="frame" x="205" y="426" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="blJ-JC-rtf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4e3-Kz-lIN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="blJ-JC-rtf" secondAttribute="bottom" id="KyO-r9-kJc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="blJ-JC-rtf" secondAttribute="trailing" id="TNk-Zu-RQ8"/>
+                            <constraint firstItem="blJ-JC-rtf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xd7-ak-5a1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wk3-46-jny"/>
+                    <connections>
+                        <outlet property="indicator" destination="wDh-ve-bZR" id="lLb-TV-BQa"/>
+                        <outlet property="schoolTableView" destination="blJ-JC-rtf" id="ERF-Nw-VlK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="103.79464285714285"/>
+        </scene>
+        <!--School Detail View Controller-->
+        <scene sceneID="5TF-RN-33o">
+            <objects>
+                <viewController storyboardIdentifier="SchoolDetailViewController" id="bC3-qy-oo4" customClass="SchoolDetailViewController" customModule="NYC_HighSchool" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dug-dx-2BY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="135" estimatedRowHeight="135" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wzJ-vB-19a">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="bC3-qy-oo4" id="KIX-AB-Qmn"/>
+                                    <outlet property="delegate" destination="bC3-qy-oo4" id="8lr-t3-95T"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="7nF-uU-vby">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3bm-eD-vId"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3bm-eD-vId" firstAttribute="trailing" secondItem="wzJ-vB-19a" secondAttribute="trailing" id="CZA-jC-i9l"/>
+                            <constraint firstItem="wzJ-vB-19a" firstAttribute="top" secondItem="3bm-eD-vId" secondAttribute="top" id="GpJ-Zf-tLS"/>
+                            <constraint firstItem="3bm-eD-vId" firstAttribute="bottom" secondItem="wzJ-vB-19a" secondAttribute="bottom" id="S7a-Pg-fIt"/>
+                            <constraint firstItem="wzJ-vB-19a" firstAttribute="leading" secondItem="3bm-eD-vId" secondAttribute="leading" id="hwb-za-Ixf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="indicator" destination="7nF-uU-vby" id="jyf-d5-f3a"/>
+                        <outlet property="schoolDetailTableView" destination="wzJ-vB-19a" id="92l-84-isf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BeY-c0-R8f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1736" y="99"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hCh-Zt-qqW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ttA-O8-Uzk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tfz-Ym-oPv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Pgq-dr-l8S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bqC-54-toR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
